@@ -23,7 +23,12 @@ public class HipsterAppController
 	
 	public void start()
 	{
-		selfHipster.setHipsterAlbums(myAlbums);
+		
+	}
+	
+	public Hipster getSelfHipster()
+	{
+		return selfHipster;
 	}
 	
 	private void buildAlbumArray()
@@ -33,5 +38,7 @@ public class HipsterAppController
 		myAlbums[1] = "Zelda MM 3D";
 		myAlbums[2] = "Zelda WW HD";
 		myAlbums[3] = "Zelda TP";
+		selfHipster.setHipsterAlbums(myAlbums);
 	}
+	
 }
