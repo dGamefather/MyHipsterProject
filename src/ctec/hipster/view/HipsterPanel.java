@@ -35,6 +35,12 @@ public class HipsterPanel extends JPanel
 		albumBox.setModel(new DefaultComboBoxModel(baseController.getSelfHipster().getHipsterAlbums()));
 	}
 	
+	/**
+	 * Adds the components to the layout.
+	 * 
+	 * @author Brennan Litster
+	 * @version 1.1 11/19/14
+	 */
 	private void setupPanel()
 	{
 		this.setBackground(Color.black);
@@ -44,6 +50,12 @@ public class HipsterPanel extends JPanel
 		this.add(albumBox);
 	}
 	
+	/**
+	 * Sets up the layout of the buttons and text boxes in the window.
+	 * 
+	 * @author Brennan Litster
+	 * @version 1.1 11/19/14
+	 */
 	private void setupLayout()
 	{
 		baseLayout.putConstraint(SpringLayout.SOUTH, albumLabel, -92, SpringLayout.SOUTH, this);
@@ -57,6 +69,12 @@ public class HipsterPanel extends JPanel
 		
 	}
 	
+	/**
+	 * Changes Album Label when selecting an option in the drop-down.
+	 * 
+	 * @author Brennan Litster
+	 * @version 1.1 11/19/14
+	 */
 	private void setupListeners()
 	{
 		albumBox.addItemListener(new ItemListener()
@@ -66,15 +84,19 @@ public class HipsterPanel extends JPanel
 			{
 				if (albumBox.getSelectedIndex() == 0)
 				{
-					albumLabel.setText("You are truly a hipster");
+					albumLabel.setText("You are truly retro!");
 				}
-				else if (albumBox.getSelectedIndex() <= 2)
+				else if (albumBox.getSelectedIndex() == 1)
 				{
-					albumLabel.setText("You may have some hipster quality");
+					albumLabel.setText("Amazingness!");
+				}
+				else if (albumBox.getSelectedIndex() == 2)
+				{
+					albumLabel.setText("Terrific!");
 				}
 				else
 				{
-					albumLabel.setText("NOT A HIPSTER");
+					albumLabel.setText("NOT COOL...");
 				}
 			}
 		});

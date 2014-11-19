@@ -2,10 +2,12 @@ package ctec.hipster.controller;
 
 import ctec.hipster.model.Hipster;
 import ctec.hipster.view.HipsterFrame;
+
 /**
- *  HipsterAppController for the 2014 Hipster day project
- * @author CodyH
- * @version 1.0 11/12/14 Basic framework only
+ * Selections with the drop-down menu.
+ * 
+ * @author Brennan Litster
+ * @version 1.1 11/19/14
  */
 public class HipsterAppController
 {
@@ -34,7 +36,7 @@ public class HipsterAppController
 	private void buildAlbumArray()
 	{
 		myAlbums = new String[4];
-		myAlbums[0] = "Zelda OoT 3D";
+		myAlbums[0] = "Zelda OoT";
 		myAlbums[1] = "Zelda MM 3D";
 		myAlbums[2] = "Zelda WW HD";
 		myAlbums[3] = "Zelda TP";
